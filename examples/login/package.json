@@ -5,6 +5,6 @@
     "express": "3.x",
     "ejs": ">= 0.0.0",
     "passport": ">= 0.0.0",
-    "passport-captureplay": ">= 0.0.0"
+    "passport-captureplay": "git://github.com/captureplay/passport-captureplay.git"
   }
 }

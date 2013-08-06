@@ -1,19 +1,20 @@
 {
   "name": "passport-captureplay",
-  "version": "0.1.5",
+  "version": "0.0.1",
   "description": "CapturePlay authentication strategy for Passport.",
   "keywords": ["passport", "captureplay", "auth", "authn", "authentication", "identity"],
   "repository": {
     "type": "git",
-    "url": "git://github.com/jaredhanson/passport-captureplay.git"
+    "url": "git://github.com/captureplay/passport-captureplay.git"
   },
   "bugs": {
-    "url": "http://github.com/jaredhanson/passport-captureplay/issues"
+    "url": "http://github.com/captureplay/passport-captureplay/issues"
   },
   "author": {
-    "name": "Jared Hanson",
-    "email": "jaredhanson@gmail.com",
-    "url": "http://www.jaredhanson.net/"
+    "name": "Aaron Caswell",
+    "email": "aaron@captureplay.com",
+    "url": "http://captureplay.com/",
+    "via": "https://github.com/jaredhanson/passport-facebook"
   },
   "licenses": [ {
     "type": "MIT",
