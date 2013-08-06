@@ -4,7 +4,7 @@ var express = require('express')
   , CapturePlayStrategy = require('passport-captureplay').Strategy;
 
 var CAPTUREPLAY_APP_ID = "5201588ff6100b891e000007"
-var CAPTUREPLAY_APP_SECRET = "4453109c563549fe9d036b3f3f4d24827645a681";
+var CAPTUREPLAY_APP_SECRET = "ad3b521f62ec5d8dea8244b7ebb925b7643f9dd3";
 
 
 // Passport session setup.
@@ -30,9 +30,10 @@ passport.deserializeUser(function(obj, done) {
 passport.use(new CapturePlayStrategy({
     clientID: CAPTUREPLAY_APP_ID,
     clientSecret: CAPTUREPLAY_APP_SECRET,
-    callbackURL: "http://localhost:3000/auth/captureplay/callback",
-    authorizationURL: 'http://gorilla.local:5000/api/v1/oauth/dialog/authorize',
-    tokenURL: 'http://gorilla.local:5000/api/v1/oauth/token'
+    callbackURL: "http://localhost:3001/auth/captureplay/callback",
+    authorizationURL: 'http://captureplay.local:5000/api/v1/oauth/dialog/authorize',
+    tokenURL: 'http://captureplay.local:5000/api/v1/oauth/token',
+    profileURL: 'http://captureplay.local:5000/api/v1/users/me'
   },
   function(accessToken, refreshToken, profile, done) {
     // asynchronous verification, for effect...
@@ -110,7 +111,7 @@ app.get('/logout', function(req, res){
   res.redirect('/');
 });
 
-app.listen(3000);
+app.listen(3001);
 
 
 // Simple route middleware to ensure user is authenticated.
