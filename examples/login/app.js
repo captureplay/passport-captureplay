@@ -3,8 +3,8 @@ var express = require('express')
   , util = require('util')
   , CapturePlayStrategy = require('passport-captureplay').Strategy;
 
-var CAPTUREPLAY_APP_ID = "5201588ff6100b891e000007"
-var CAPTUREPLAY_APP_SECRET = "ad3b521f62ec5d8dea8244b7ebb925b7643f9dd3";
+var CAPTUREPLAY_APP_ID = "52000a0055cf700d2e000007"
+var CAPTUREPLAY_APP_SECRET = "91c0006c9670bdc8c9190d7ecf075af7478d518c";
 
 
 // Passport session setup.
@@ -30,7 +30,7 @@ passport.deserializeUser(function(obj, done) {
 passport.use(new CapturePlayStrategy({
     clientID: CAPTUREPLAY_APP_ID,
     clientSecret: CAPTUREPLAY_APP_SECRET,
-    callbackURL: "http://localhost:3001/auth/captureplay/callback",
+    callbackURL: "http://gorilla.local:3001/auth/captureplay/callback",
     authorizationURL: 'http://captureplay.local:5000/api/v1/oauth/dialog/authorize',
     tokenURL: 'http://captureplay.local:5000/api/v1/oauth/token',
     profileURL: 'http://captureplay.local:5000/api/v1/users/me'
